@@ -8,13 +8,17 @@
         <label class="block text-gray-700 font-bold mb-2" for="professor-name">
           Name
         </label>
-        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="professor-name" type="text" v-model="newProfessor.name">
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="professor-name" type="text" v-model="newProfessor.name">
       </div>
       <div class="mb-4">
         <label class="block text-gray-700 font-bold mb-2" for="professor-email">
           Email
         </label>
-        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="professor-email" type="email" v-model="newProfessor.email">
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="professor-email" type="email" v-model="newProfessor.email">
       </div>
       <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">
         Add Professor
@@ -27,7 +31,9 @@
         <label class="block text-gray-700 font-bold mb-2" for="subject-name">
           Name
         </label>
-        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="subject-name" type="text" v-model="newSubject.name">
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="subject-name" type="text" v-model="newSubject.name">
       </div>
       <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">
         Add Subject
@@ -39,18 +45,24 @@
         <label class="block text-gray-700 font-bold mb-2" for="subject">
           Subject
         </label>
-        <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="subject" v-model="selectedSubject">
-          <option v-for="subject in subjects" :value="subject">{{ subject.name }}</option>
+
+        <select
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="subject" v-model="selectedSubject">
+          <option v-for="subject in subjects" :key="subject.id" :value="subject">{{ subject.name }}</option>
         </select>
       </div>
       <div class="mb-4">
         <label class="block text-gray-700 font-bold mb-2" for="professor">
           Professor
         </label>
-        <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="professor" v-model="selectedProfessor">
-          <option v-for="professor in professors" :value="professor">{{ professor.name }}</option>
+        <select
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="professor" v-model="selectedProfessor">
+          <option v-for="professor in professors" :key="professor.id" :value="professor">{{ professor.name }}</option>
         </select>
       </div>
+    </form>
   </div>
 </template>
 
