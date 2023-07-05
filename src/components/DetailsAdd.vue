@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4">
+  <div class="p-4 w-96">
     <h1 class="text-2xl font-bold mb-4">Timetable Manager</h1>
 
     <h2 class="text-lg font-bold mb-2">Add Professor</h2>
@@ -67,5 +67,37 @@
 </template>
 
 <script>
+
+
+export default {
+  data() {
+    return {
+      newProfessor: {
+        name: '',
+        email: '',
+      },
+      newSubject: {
+        name: '',
+      },
+      selectedSubject: null,
+      selectedProfessor: null,
+      subjects: [], // Provide your subjects data here
+      professors: [], // Provide your professors data here
+    };
+  },
+  methods: {
+    addProfessor() {
+      // Handle adding a new professor
+    },
+    addSubject() {
+      // Handle adding a new subject
+    },
+    assignSubject() {
+      // Handle assigning a subject to a professor
+    },
+  },
+};
+
+
 
 </script>
